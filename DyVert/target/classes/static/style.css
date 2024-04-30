@@ -1,0 +1,421 @@
+* {
+    background-color: #121212;
+    color: white;
+    margin: 0px;
+    padding: 0px;
+}
+
+a {
+    text-decoration: none;
+}
+
+nav {
+    display: flex;
+    flex-grow: 1;
+    gap: 4em;
+}
+
+.roboto-mono-nav-brand {
+    font-family: "Roboto Mono", monospace;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 48px;
+}
+
+.roboto-mono-nav-links {
+    font-family: "Roboto Mono", monospace;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-style: normal;
+    font-size: 34px;
+}
+
+.nav-brand {
+    display: flex;
+    align-items: center;
+}
+
+ul.links {
+    list-style: none;
+    display: flex;
+    flex: 1;
+    align-items: center;
+    gap: 2em;
+}
+
+.nav-links {
+    display: flex;
+    flex-grow: 1;
+    justify-content: center;
+}
+
+.nav-profile-container{
+    width:4em;
+}
+
+.nav-bar {
+    margin: 1em 2em;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+}
+
+/*********************************************/
+
+.sidebar {
+    font-family: "Roboto Mono", monospace;
+    font-style: normal;
+    
+    width: 300px;
+    margin-top: 70px;
+    margin-left:30px;
+    border-right: solid 2px #BB86FC;
+    height:750px;
+    
+}
+
+.sidebar h2 {
+    font-size: 30px;
+    display: inline-block;
+    font-weight: normal;
+
+}
+.sidebar img {
+    width: 30px;
+    vertical-align: middle;
+    padding-left: 160px;
+    padding-bottom: 10px;
+    display: inline-block;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar li {
+    margin-top: 20px;
+    border-bottom: #BB86FC solid 2px;
+    margin-right: 30px;
+    padding: 10px;
+    font-size: 20px;
+    transition: background-color 0.2s ease;
+}
+
+.sidebar li:hover {
+    color: #121212;
+    background-color: #BB86FC;
+    transition-delay: 0.3s ease;
+}
+
+.create {
+    font-family: "Roboto Mono", monospace;
+    font-style: normal;
+    width: 500px;
+    margin-left:70px;
+}
+
+.create img {
+    width: 30px;
+    vertical-align: middle;
+    display: inline-block;
+    padding-left: 370px;
+    padding-bottom: 21px
+}
+
+.create h2 {
+    font-size: 30px;
+    display: inline-block;
+    font-weight: normal;
+    
+}
+
+#title {
+    margin-top: 70px;
+    display: inline-block;
+}
+
+#syn {
+    margin-top: 20px;
+}
+
+#tTextbox {
+    margin-top: 10px;
+    background-color: rgb(61, 54, 54);
+    width: 500px;
+    height: 25px;
+}
+
+#tSyn {
+    margin-top: 10px;
+    background-color: rgb(61, 54, 54);
+    width: 500px;
+    padding: 0 0 150px;
+}
+
+.checks {
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.cheks {
+    margin-bottom: 10px;
+    display: flex;
+}
+
+
+.checks input[type ="checkbox"] {
+    margin-right: 20px;
+    
+}
+
+.checks label {
+    margin-right: 50px;
+    padding: 10px;
+}
+
+#photo{
+    margin-top: 10px;
+    background-color: rgb(61, 54, 54);
+    width: 500px;
+}
+
+.button {
+    margin-top: 25px;
+    border: none;
+    background-color: rgb(61, 54, 54);
+    padding: 10px 20px;
+    font-size: 20px;
+    width: 150px;
+    text-align: center;
+    cursor: pointer;
+    display: inline;
+}
+
+.button2 {
+    margin-top: 25px;
+    width: 140px;
+    border: none;
+    background-color: #BB86FC;
+    color: #121212;
+    padding: 10px 20px;
+    font-size: 20px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.preview {
+    font-family: "Roboto Mono", monospace;
+    font-style: normal;
+    width: 500px;
+    margin-left:300px;
+}
+
+.preview h2 {
+    font-weight: normal;
+}
+
+.previewB{
+    width: 400px;
+    border: #BB86FC solid 2px;
+    height: 500px;
+    margin-top: 30px;
+}
+
+.button3 {
+    margin-top: 25px;
+    width: 140px;
+    border: #BB86FC solid 2px;
+    color: #BB86FC;
+    padding: 10px 20px;
+    font-size: 16px;
+    text-align: center;
+    cursor: pointer;
+}
+
+/*********************************************/
+
+.link-active {
+    border-bottom: solid;
+    border-color: #BB86FC;
+    border-width: 3px;
+}
+
+.content-container {
+    margin: 2em 2em;
+    display: flex;
+}
+
+.side-menu {
+    display:flex;
+    flex-direction: column;
+    gap: 2em;
+}
+
+.side-menu-icons {
+    width: 3em;
+}
+
+.side-option {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+}
+
+.side-menu-text {
+    font-family: "Roboto Mono", monospace;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 24px;
+}
+
+.side-menu-text:hover {
+    color:#BB86FC;
+}
+
+.content-card-header {
+    font-family: "Roboto Mono", monospace;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 24px;
+}
+
+.content-card-text {
+    font-family: "Roboto Slab", serif;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-style: normal;
+    font-size: 16px;
+}
+
+.swipe-content {
+    display: flex;
+    flex-grow: 1;
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.content-card {
+    width: 40vh;
+    height: 60vh;
+    display: grid;
+    grid-template-columns: 45% 45%;
+    grid-template-rows: auto auto auto auto;
+    border: 3px solid #BB86FC;
+    border-radius: 10px;
+    column-gap: 1em;
+    padding: 4px;
+    margin: 0em 1em;
+}
+
+.content-image {
+    grid-row: 1/4;
+    grid-column: 1/2;
+}
+
+.content-synopsis {
+    grid-column: 1/3;
+}
+
+.poster-image {
+    width: 100%;
+}
+
+/*********************************************/
+
+.table-container {
+    display: flex;
+
+    flex-grow: 1;
+
+    height: 60vh;
+
+    justify-content: center;
+}
+
+th {
+    text-align: left;
+
+    font-family: "Roboto Mono", monospace;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 30px;
+}
+
+td {
+    border-bottom: 1px solid #BB86FC;
+
+    font-family: "Roboto Slab", serif;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-style: normal;
+    font-size: 20px;
+}
+
+tr {
+    margin-bottom: 1em;
+}
+
+.bucket-table {
+    width: 90%;
+    border-collapse: collapse;
+}
+
+.table-icon {
+    height: 1em;
+    margin-right: 2em;
+}
+
+.view-card-content {
+    display: flex;
+    flex-grow: 1;
+    border-radius: 10px;
+    justify-content: center;
+}
+
+.acct-notation {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+}
+
+.side-menu-heading {
+    font-family: "Roboto Mono", monospace;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 34px;
+}
+
+.menu-option {
+    border-bottom: 3px solid #BB86FC;
+}
+
+.admin-active {
+    background-color: #BB86FC;
+    color: white;
+
+    font-family: "Roboto Mono", monospace;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 24px;
+}
+
+.admin-tools {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+    margin-right: 1em;
+}

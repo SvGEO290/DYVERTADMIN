@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en" 
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+    <title>DyVert</title>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com"/>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/style.css">
+        
+    <style>
+        .action-container {
+            display: flex;
+            align-items: center;
+        }
+
+        .action-link, .action-form {
+            margin-right: 10px; /* Adjust spacing between link and form */
+        }
+
+        /* Optional: Style button to look like a link */
+        .action-form button {
+            background: none;
+            border: none;
+            padding: 0;
+            font: inherit;
+            cursor: pointer;
+            outline: inherit;
+        }
+
+    </style>
+</head>
+<body>
+    <nav class="nav-bar">
+        <div class="nav-brand roboto-mono-nav-brand">
+            <a class="navbar-brand" href="#">DyVert</a>
+        </div>
+        <div class="nav-links roboto-mono-nav-links">
+            <ul class="links">
+                <li>
+                    <a th:href="@{/user/home/{id}(id=${userId})}">Home</a>
+                </li>
+                <li>
+                    <a href="#" class="link-active">Bucket</a>
+                </li>
+                <li>
+                    <a href="#">About Us</a>
+                </li>
+            </ul>
+        </div>
+        <div class="nav-profile-container">
+            <a href="./login.html" class="nav-profile-container">
+                <img class="nav-profile" src="/Icons/user-circle.svg" alt="profile icon">
+            </a>
+        </div>
+    </nav>
+
+    <div class="content-container">
+        <div class="side-menu">
+            <div class="movie-side side-option">
+                <a th:href="@{/user/bucket/{id}/movies(id=${userId})}" class="side-option">
+                    <img class="side-menu-icons" src="/Icons/film.svg" alt="film icon">
+                    <p class="side-menu-text">Movies</p>
+                </a>
+            </div>
+            <div class="book-side side-option">
+                <a th:href="@{/user/bucket/{id}/books(id=${userId})}" class="side-option">
+                    <img class="side-menu-icons" src="/Icons/book.svg" alt="book icon">
+                    <p class="side-menu-text">Books</p>
+                </a>
+            </div>
+            <div class="show-side side-option">
+                <a th:href="@{/user/bucket/{id}/shows(id=${userId})}" class="side-option">
+                    <img class="side-menu-icons" src="/Icons/television.svg" alt="TV icon">
+                    <p class="side-menu-text">Shows</p>
+                </a>
+            </div>
+            <div class="genres-side side-option">
+                <a th:href="@{/user/bucket/{id}(id=${userId})}" class="side-option">
+                    <img class="side-menu-icons" src="/Icons/bars.svg" alt="Bar menu">
+                    <p class="side-menu-text">All Items</p>
+                </a>
+            </div>
+        </div>
+
+        <div class="table-container">
+            <table class="bucket-table content-card-text">
+                <thead>
+                    <tr>
+                        <th>Title</th>
+                        <th>Type</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr th:each="card : ${bucketList}">
+                        <td th:text="${card.title}"></td>
+                        <td th:text="${card.type}"></td>
+                        <td>
+                            <div class="action-container">
+                                <a th:href="@{/user/bucket/{id}/card-detail/{cardID}(id=${userId},cardID=${card.cardID})}" class="action-link">
+                                    <img src="/Icons/eye.svg" class="table-icon" alt="View Icon">
+                                </a>
+                                <form id="delete-from-bucket-form" th:action="@{/user/delete-from-bucket}" method="POST" class="action-form">
+                                    <input type="hidden" name="id" th:value="${userId}">
+                                    <input type="hidden" name="cardID" th:value="${card.cardID}">
+                                    <button type="submit">
+                                        <img src="/Icons/trash.svg" class="table-icon" alt="Delete Icon">
+                                    </button>
+                                </form>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+
+</body>

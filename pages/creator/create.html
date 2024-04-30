@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DyVert</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../styles/style.css">
+</head>
+
+<body>
+    <header>
+        <nav class="nav-bar">
+            <div class="nav-brand roboto-mono-nav-brand">
+                <a class="navbar-brand" href="#">DyVert</a>
+            </div>
+            <div class="nav-links roboto-mono-nav-links">
+                <ul class="links">
+                    <li>
+                        <a href="#" class="link-active">Create</a>
+                    </li>
+                    <li>
+                        <a href="#">About Us</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="acct-notation roboto-mono-nav-links">
+                <a href="../admin/admin.html">
+                    Go to Admin Account
+                </a>
+            </div>
+
+            <div class="nav-profile-container">
+                <a href="../user/login.html">
+                    <img class="nav-profile" src="../Icons/user-circle.svg" alt="profile icon">
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="sidebar">
+            <h2>Cards</h2>
+            <a href="#"><img src="../Icons/edit.svg" alt="Create Card"></a>
+            <ul>
+                <a href="#">
+                    <li>Draft 1</li>
+                </a>
+                <a href="#">
+                    <li>The Reckoning</li>
+                </a>
+                <a href="#">
+                    <li>The Bear</li>
+                </a>
+                <a href="#">
+                    <li>Check Yourself</li>
+                </a>
+            </ul>
+        </div>
+        <div class="create">
+            
+            <h2 id="title">Title</h2>
+            <a href ="#"><img src="../Icons/times.svg" alt ="Delete"></a>
+            <br>
+            <input type="text" name="Title" id="tTextbox">
+            <h2 id="syn">Synopsis</h2>
+            <input type="text" name="Synopsis" id="tSyn">
+            <h2 id="syn">Genres</h2><br>
+            <div class="checks">
+                <div class="cheks">
+                    <input class="checkbox1" type="checkbox" id="checkbox" name="Indie">
+                    <label for="Indie">Indie</label>
+                    <input type="checkbox" id="checkbox" name="Drama">
+                    <label for="Drama">Drama</label>
+
+                </div>
+                <div class="cheks">
+                    <input type="checkbox" id="checkbox" name="Comedy">
+                    <label for="Comedy">Comedy</label>
+                    <input type="checkbox" id="checkbox" name="Romance">
+                    <label for="Romance">Romance</label>
+                </div>
+                <div class="cheks">
+                    <input type="checkbox" id="checkbox" name="Action">
+                    <label for="Action">Action</label>
+                    <input type="checkbox" id="checkbox" name="Popular">
+                    <label for="Popular">Popular</label>
+                </div>
+
+                <div class = "cheks">
+                    <input type="checkbox" id="checkbox" name="Horror">
+                    <label for="Horror">Horror</label>
+                    <input type="checkbox" id="checkbox" name="Adventure">
+                    <label for="Adventure">Adventure</label>
+                </div>
+            </div>
+            <h2 id = "syn">Images</h2>
+            <input type ="file" id ="photo" name ="photo" accept="image/*">
+            <button class = "button">Save Draft</button>
+            <button class = "button2">Publish</button>
+        </div>
+
+        <div class = "preview">
+            <h2 id = "title">Preview</h2>
+            <div class = "previewB">
+            </div>
+            <button class = "button3">Generate</button>
+        </div>
+
+    </div>
+
+
+
+
+</body>
+
+</html>

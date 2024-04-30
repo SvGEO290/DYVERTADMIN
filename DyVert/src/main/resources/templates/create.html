@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en" 
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+    <title>DyVert</title>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com"/>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/style.css">
+    <script src="/creator.js" defer></script>    
+</head>
+<body>
+    <nav class="nav-bar">
+        <div class="nav-brand roboto-mono-nav-brand">
+            <a class="navbar-brand" href="#">DyVert</a>
+        </div>
+        <div class="nav-links roboto-mono-nav-links">
+            <ul class="links">
+                <li>
+                    <a href="#" class="link-active">Dashboard</a>
+                </li>
+                <li>
+                    <a href="#">About Us</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="acct-notation roboto-mono-nav-links">
+            <a href="/card/all-unreviewed">
+                Go to Admin Account
+            </a>
+        </div>
+        <!-- Profile button container -->
+        <div class="nav-profile-container">
+            <a href="../user/login.html" class="nav-profile-container">
+                <img class="nav-profile" src="/Icons/user-circle.svg" alt="profile icon">
+            </a>
+        </div>
+    </nav>
+    
+  <div class="container">
+    <div class="sidebar">
+        <h2>Cards</h2>
+        <a href="#" id="createCardButton"><img src="../Icons/edit.svg" alt="Create Card"></a>
+        <ul id="cardList">
+        <li th:each="card : ${userCards}" th:text="${card.title}" th:attr="data-card-id=${card.cardID}" class="edit-card"></li>
+    </ul>
+    </div>
+
+   
+   <form id="cardForm" action="/card/publish" method="post">
+    <div class="create">
+        <h2 id="title">Title</h2>
+        <a href="#"><img src="../Icons/times.svg" alt="Delete"></a>
+        <br>
+            <input type="text" name="title" id="tTextbox"  required></input>
+        <h2 id="syn">Synopsis</h2>
+        <input type="text" name="synopsis" id="tSyn" required></input>
+        <h2 id="syn">Genres</h2><br>
+        <div class="checks">
+            <div class="cheks">
+                <input class="checkbox1" type="checkbox" id="indie" name="genres" value="Indie"></input>
+                <label for="indie">Indie</label>
+                <input class="checkbox" type="checkbox" id="drama" name="genres" value="Drama"></input>
+                <label for="Drama">Drama</label>
+            </div>
+            <div class="cheks">
+                <input class="checkbox" type="checkbox" id="comedy" name="genres" value="Comedy"></input>
+                <label for="indie">Comedy</label>
+                <input class="checkbox" type="checkbox" id="drama" name="genres" value="Romance"></input>
+                <label for="Drama">Romance</label>
+            </div>
+            <div class="cheks">
+                <input class="checkbox" type="checkbox" id="action" name="genres" value="Action"></input>
+                <label for="indie">Action</label>
+                <input class="checkbox" type="checkbox" id="popular" name="genres" value="Popular"></input>
+                <label for="Drama">Popular</label>
+            </div>
+            <div class="cheks">
+                <input class="checkbox" type="checkbox" id="horror" name="genres" value="Horror"></input>
+                <label for="indie">Horror</label>
+                <input class="checkbox" type="checkbox" id="adventure" name="genres" value="Adventure"></input>
+                <label for="Drama">Adventure</label>
+            </div>
+            
+        </div>
+        <h2 id="syn">Image Path</h2>
+        <input type="text" id="imagePath" name="imagePath"></input>
+            
+        <button class = "button2" type = "submit">Publish</button>
+        
+      </div>
+      </form>
+    </div>
+    
+
+
+  
+</body>
+</html>
+    
